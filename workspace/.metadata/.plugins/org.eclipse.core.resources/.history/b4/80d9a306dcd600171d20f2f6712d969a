@@ -1,0 +1,64 @@
+package structures;
+
+import comparators.IntegerComparator;
+import java.util.*;
+
+import java.util.Comparator;
+import java.util.Iterator;
+
+public class MaxQueue<V> implements PriorityQueue<Integer, V> {
+	private ArrayList<Entry<Integer,V>> queue;
+	
+	@Override
+	public PriorityQueue<Integer, V> enqueue(Integer priority, V value) {
+		// TODO Auto-generated method stub
+		int min=0;
+		int max=queue.size()-1;
+		while(max-min>0) {
+			Entry<Integer,V> curr =queue.get((max-min)/2);
+			if(curr.getPriority()==priority) {
+				queue.add((max-min)/2,new Entry<Integer,V>(priority, value));
+			}
+			if(priority>curr.getPriority()) min=(max-min)/2;
+			else if(priority<curr.getPriority()) max=(max-min)/2;
+		}
+		return null;
+	}
+
+	@Override
+	public V dequeue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public V peek() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterator<Entry<Integer, V>> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Comparator<Integer> getComparator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+}

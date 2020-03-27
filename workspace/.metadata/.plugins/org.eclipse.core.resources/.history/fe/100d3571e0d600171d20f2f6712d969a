@@ -1,0 +1,76 @@
+package structures;
+
+import comparators.IntegerComparator;
+import java.util.*;
+
+import java.util.Comparator;
+import java.util.Iterator;
+
+public class MaxQueue<V> implements PriorityQueue<Integer, V> {
+	private ArrayList<Entry<Integer,V>> queue;
+	
+	@Override
+	public PriorityQueue<Integer, V> enqueue(Integer priority, V value) {
+		// TODO Auto-generated method stub
+		if(priority==null || value==null) throw new NullPointerException();
+		int min=0;
+		int max=queue.size()-1;
+		Entry<Integer,V> curr=null;
+		int index=-1;
+		while(max-min>0) {
+			index=(max-min)/2+min;
+			curr =queue.get(index);
+			if(curr.getPriority()==priority) {
+				queue.add(index,new Entry<Integer,V>(priority, value));
+				return this;
+			}
+			if(priority>curr.getPriority()) min=index;
+			else if(priority<curr.getPriority()) max=index;
+		}
+		if(curr.getPriority()>priority) queue.add(index+1,new Entry<Integer,V>(priority, value));
+		else queue.add(index,new Entry<Integer,V>(priority, value));
+		return this;
+	}
+
+	@Override
+	public V dequeue() {
+		// TODO Auto-generated method stub
+		if(queue.size()<1) throw new IllegalStateException();
+		V value=queue.get(queue.size()-1).getValue();
+		queue.remove(queue.size()-1);
+		return value;
+	}
+
+	@Override
+	public V peek() {
+		// TODO Auto-generated method stub
+		if(queue.size()<1) throw new IllegalStateException();
+		return queue.get(queue.size()-1).getValue();
+	}
+
+	@Override
+	public Iterator<Entry<Integer, V>> iterator() {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+
+	@Override
+	public Comparator<Integer> getComparator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return queue.size();
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return (size()==0);
+	}
+	
+}

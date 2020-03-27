@@ -1,0 +1,37 @@
+package guessme;
+
+/**
+ * This class defines a linked list node storing an integer.
+ * Use primitive type int (do not use wrapper class Integer)
+ * You must provide the following methods:
+ * - a constructor
+ * - a setInfo method and a getInfo method
+ * - a setLink method and a getLink method
+ */
+public class LLIntegerNode {
+	// TODO
+	private int num;
+	private LLIntegerNode link;
+	
+	public LLIntegerNode(int nodeNum) {
+		num=nodeNum;
+		link=null;
+	}
+	public LLIntegerNode(int nodeNum, LLIntegerNode nodeLink) {
+		num=nodeNum;
+		link=nodeLink;
+	}
+	public void setLink(LLIntegerNode nodeLink) {
+		link=nodeLink;
+	}
+	public LLIntegerNode getLink() {
+		return link;
+	}
+	public int getNum() {
+		return num;
+	}
+	
+	
+	
+}
+

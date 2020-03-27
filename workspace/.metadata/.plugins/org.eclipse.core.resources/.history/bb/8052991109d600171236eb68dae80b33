@@ -1,0 +1,33 @@
+package structures;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+
+public class StudentArrayHeap<P, V> extends AbstractArrayHeap<P, V> {
+	
+	public StudentArrayHeap(Comparator<P> comparator) {
+		super(comparator);
+	}
+	protected int getLeftChildOf(int index) {
+		if(index<0)throw new IndexOutOfBoundsException();
+		/*if(heap.size()>index*2+1)*/return index*2+1;
+		//return -1;
+	}
+	protected int getRightChildOf(int index) {
+		if(index<0)throw new IndexOutOfBoundsException();
+		/*if(heap.size()>index*2+2)*/return index*2+2;
+		//return -1;
+	}
+	protected int getParentOf(int index) {
+		
+	}
+	protected void bubbleUp(int index) {
+		
+	}
+	protected void bubbleDown(int index) {
+		
+	}
+	
+}
+

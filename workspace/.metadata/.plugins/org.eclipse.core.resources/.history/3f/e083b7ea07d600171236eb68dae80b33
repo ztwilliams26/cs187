@@ -1,0 +1,20 @@
+package structures;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+
+public class StudentArrayHeap<P, V> extends AbstractArrayHeap<P, V> {
+	
+	public StudentArrayHeap(Comparator<P> comparator) {
+		super(comparator);
+	}
+	protected int getLeftChildOf(int index) {
+		
+	}
+	protected int getRightChildOf(int index) {
+		
+	}
+	
+}
+

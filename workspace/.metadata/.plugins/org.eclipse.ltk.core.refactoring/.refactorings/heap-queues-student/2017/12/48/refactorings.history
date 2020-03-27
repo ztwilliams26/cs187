@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;disp&apos; in &apos;structures.MaxQueue.enqueue(...)&apos; to &apos;index&apos;&#x0D;&#x0A;- Original project: &apos;heap-queues-student&apos;&#x0D;&#x0A;- Original element: &apos;structures.MaxQueue.enqueue(Integer, V).disp&apos;&#x0D;&#x0A;- Renamed element: &apos;disp&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;disp&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;structures{MaxQueue.java[MaxQueue~enqueue~QInteger;~QV;@disp!454!478!458!461!I!0!false" name="index" references="true" stamp="1512162485945" version="1.0"/>
+</session>

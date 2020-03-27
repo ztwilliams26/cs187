@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;cur&apos; in &apos;structures.Queue.Queue(...)&apos; to &apos;oCur&apos;&#x0D;&#x0A;- Original project: &apos;queues-student&apos;&#x0D;&#x0A;- Original element: &apos;structures.Queue.Queue(Queue&lt;T&gt;).cur&apos;&#x0D;&#x0A;- Renamed element: &apos;cur&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;cur&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;structures{Queue.java[Queue~Queue~QQueue\&lt;QT;&gt;;@cur!704!728!712!714!QNode\&lt;QT;&gt;;!0!false" name="oCur" references="true" stamp="1509044046647" version="1.0"/>
+</session>
